@@ -1,3 +1,4 @@
+cd ..
 # Start by symlinking to proton dlls
 OIFS="$IFS"
 IFS=$'\n'
@@ -7,7 +8,7 @@ do
 done
 IFS="$OIFS"
 # Then, move to the proton prefix
-cd "../../compatdata/460120/pfx"
+cd "../compatdata/460120/pfx"
 # Remove and replace with a 32-bit (Since megadimension won't work with 64-bit wine)
 sudo rm -r *
 WINEARCH=win32 WINEPREFIX=$PWD winetricks devenum quartz wmp10 csmt=on
