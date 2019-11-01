@@ -10,6 +10,7 @@ IFS="$OIFS"
 cd "../../compatdata/460120"
 # Remove and replace with a 32-bit (Since megadimension won't work with 64-bit wine)
 sudo rm -r pfx
+mkdir pfx
 cd pfx
 WINEARCH=win32 WINEPREFIX=$PWD winetricks devenum quartz wmp10 csmt=on
 cd drive_c/windows
